@@ -1,20 +1,9 @@
 42
 ==
 
-Projects for Ecole 42 written in C.
+Projects of Emil Mammadzada for Ecole 42.
 
-The projects respect the norm of the school for the C language.
-
-The most importants are the following:
-
--5 function max per file.
-
--25 lines max for a function.
-
--Specified authorized functions.
-
--Compiling with gcc -Wall -Werror -Wextra.
-
--Spaces and new lines after certain operations.
-
-Subjects can be found in the Subjects Folder.
+Graphic   -> written in C.
+Algorithm -> written in C.
+Unix      -> written in C.
+Web       -> written in PHP, Javascript, HTML, CSS using Symfony2, doctrine, mysql, ajax, jquery, and bootstrap.
