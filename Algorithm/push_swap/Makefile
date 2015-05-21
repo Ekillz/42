@@ -6,7 +6,7 @@
 #    By: emammadz <emammadz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/06 13:34:24 by emammadz          #+#    #+#              #
-#    Updated: 2015/04/03 17:41:27 by emammadz         ###   ########.fr        #
+#    Updated: 2015/05/21 17:22:29 by emammadz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCC =	main.c\
 		push_tools3.c\
 		push_tools4.c\
 		show_moves.c\
+		ft_realloc.c\
 
 SRCO = $(SRCC:%.c=%.o)
 

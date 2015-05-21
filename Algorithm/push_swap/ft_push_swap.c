@@ -6,7 +6,7 @@
 /*   By: emammadz <emammadz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/07 17:53:06 by emammadz          #+#    #+#             */
-/*   Updated: 2015/04/03 17:23:14 by emammadz         ###   ########.fr       */
+/*   Updated: 2015/04/03 18:48:20 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,11 @@ void	algo_swap_show(t_env *e)
 		tmp--;
 		e->i++;
 	}
-	if (e->i > 0)
+	/*if (e->i > 0)
 	{
 		ft_putstr(ft_strtrim(e->buf));
 		write(1, "\n", 1);
-	}
+	}*/
 	ft_putstr("\nCoups: ");
 	ft_putnbr(e->i);
 	write(1, "\n", 1);
