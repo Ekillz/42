@@ -1,0 +1,83 @@
+table
+{
+	border-collapse:collapse;
+	width: 1800px;
+    height: 1200px;
+	padding:0 0 0 0;
+	margin:-1 0 0 0;
+}
+
+body
+{
+	background-image: url("img/space.jpg");
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+
+.black
+{
+	border: 1px solid green;
+}
+
+.ast
+{
+background-color: #B3B191;
+}
+
+td
+{
+	width: 12px;
+	height: 12px;
+}
+
+.vais
+{
+	position: absolute;
+	display:inline-block;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+
+.asteroid
+{
+	position: absolute;
+	display:inline-block;
+	width:119px;
+	height:119px;
+	left:960px;
+	top:360px;
+	background-color:#171A3B;
+}
+
+.asteroid1
+{
+	position: absolute;
+	display:inline-block;
+	width:119px;
+	height:119px;
+	left:360px;
+	top:240px;
+	background-color:#171A3B;
+}
+
+.asteroid2
+{
+	position: absolute;
+	display:inline-block;
+	width:119px;
+	height:119px;
+	left:600px;
+	top:720px;
+	background-color:#171A3B;
+}
+
+.asteroid3
+{
+	position: absolute;
+	display:inline-block;
+	width:119px;
+	height:119px;
+	left:1320px;
+	top:720px;
+	background-color:#171A3B;
+}

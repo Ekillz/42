@@ -1,0 +1,91 @@
+body{
+	height: 100%;
+}
+
+#header{
+	position: relative;
+	height: 150px;
+	width: 100%;
+	background-color: #FF6138;
+	color: white;
+}
+
+#logo{
+	float: left;
+}
+
+h1{
+	font-family: 'Dancing Script', cursive;
+	font-size: 48px;
+	margin: 0;
+    padding: 46px;
+    vertical-align:middle; /*middle centred*/
+    display: table-cell;
+}
+
+#form{
+	float: right;
+	padding: 35px;
+	font-family: 'Dancing Script', cursive;
+	font-size: 18px;
+	margin: 0;
+    padding: 46px;
+}
+
+#main{
+	height: 100%;
+	width: 100%;
+}
+
+/* PANEL */
+
+#panel{
+	float: left;
+	background-color: #3F3F3F;
+	width: 33%;
+	height: 100%;
+}
+
+.menu{
+	width: 100%;
+	height: 33%;
+	background-color: #191919;
+  	background-image: -webkit-gradient(linear,left top,left bottom,from(#282828),to(#191919));
+  	background-image: -webkit-linear-gradient(top,#282828,#191919);
+  	background-image: linear-gradient(top,#282828,#191919);
+  	display: table; 
+}
+
+.menu p{
+	margin: 0px;
+	text-align: center; 
+	text-align: -webkit-center;
+  	vertical-align: middle;
+  	display: table-cell;   
+}
+
+.menu a{
+	margin-top: 200px;
+	font-size: 24px;
+	color: white;
+	text-decoration: none;
+	vertical-align:middle; /*middle centred*/
+    display: table-cell;
+}
+
+/* CONTENT */
+
+/* COMMANDES */
+#about ul{
+	padding: 0;
+}
+
+#content{
+	float: left;
+	width: 66%;
+	height: 100%;
+}
+
+#about{
+	padding: 60px;
+}

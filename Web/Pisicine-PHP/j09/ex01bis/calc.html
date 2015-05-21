@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<input type="text">
+	<select id="operator">
+	  <option value="+">+</option>
+	  <option value="-">-</option>
+	  <option value="*">*</option>
+	  <option value="/">/</option>
+	  <option value="%">%</option>
+	</select>
+	<input type="text">
+	<input id="sub" value="Try me!" type="submit">
+	<script>
+		$(document).ready(function(){
+			// setInterval(function(){ alert("Please, use me..."); }, 30000);
+			$("#sub").click(function(){
+				var left_m = $( 'input[type=text]:first' ).val();
+				var right_m = $( 'input[type=text]:last' ).val();
+				console.log(left_m);
+				var op_val = $("#operator option:selected").text();
+				if ( left_m >= 0 && right_m >= 0 )
+				{
+					if ( ( op_val == '%' || op_val == '/' ) && right_m == 0)
+						alert("It's over 9000!");
+					else
+					{
+						switch (op_val){
+							case "+" :
+								res = parseInt(left_m) + parseInt(right_m);
+								break;
+							case "-" :
+								res = parseInt(left_m) - parseInt(right_m);
+								break;
+							case "*" :
+								res = parseInt(left_m) * parseInt(right_m);
+								break;
+							case "/" :
+								res = parseInt(left_m) / parseInt(right_m);
+								break;
+							case "%" :
+								res = parseInt(left_m) % parseInt(right_m);
+								break;
+						}
+						alert(res);
+					}
+
+				}
+				else
+					alert("Error :(");
+			})
+		});
+	</script>
+</body>
+</html>

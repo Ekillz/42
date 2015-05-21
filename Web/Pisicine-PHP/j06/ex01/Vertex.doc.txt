@@ -1,0 +1,13 @@
+Vertex ----------------------------------------------------------------------
+The Vertex class handles x, y, z, w coordinates and the Color instance;
+
+An instance can be contructed by giving x, y, z.
+the default value for w will be 1.0 and white for Color if not speicified.
+new Vertex( array( 'x' => 12 'y' => '234' 'z' = > 3));
+new Vertex( array( 'x' => 12 'y' => '234' 'z' = > 3, 'w' = > 1.2));
+new Vertex( array( 'x' => 12 'y' => '234' 'z' = > 3, 'w' = > 1.2, 'color' => new Color()));
+
+The class provides set and get accessors for all values :
+Exemple: setX(52);
+		 getX();
+---------------------------------------------------------------------- Vertex ->

@@ -1,0 +1,19 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class accepts a destination Vertex Class and an optional origin 
+Vertex class.
+
+the syntax is the folowing:
+new Vector('dest' => $dest_object, 'orig' => $orig_object);
+new Vector('dest' => $dest_object);
+The class provides Get accessors for x, y, z and w values;
+It has the following methods:
+public function magnitude(); Gives the magnitude;
+public function normalize(); Gives the normalized Vector object
+public function add(Vector $rhs); Gives the new Vector object;
+public function sub(Vector $rhs); Gives the new Vector object;
+public function opposite(); Gives the opposite Vector object;
+public function scalarProduct($k); Gives the scalar product to a new Vector object);
+public function dotProduct(Vector $rhs) Gives the dotProduct to a new Vector object;
+public function cos(Vector $rhs); Gives the cosinus of the Vector;
+public function crossProduct(Vector $rhs); Gives the crossProduct to a new Vector object;
+---------------------------------------------------------------------- Vector ->

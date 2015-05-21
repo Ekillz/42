@@ -1,0 +1,58 @@
+	body{
+		width: 100%;
+		height: 100%;
+		background-image: url("http://www.wallpaperhdphoto.com/Game-HD-Wallpapers/Games-HD-DesktopWallpaper/images/nanosuit%20texture.jpg")
+	}
+
+	.big-font{
+		font-size: 2vw;
+	}
+
+	.little-font{
+
+		font-size: 1vw;
+		}
+	.main{
+		color: black;
+		min-height: 70px;
+		min-width: 70px;
+		height: 100%;
+		width: 99%;
+	}
+	td {
+		text-align: center;
+	}
+	p {
+		margin: 0;
+	}
+	.color0{
+		background-color: #00FF80;
+
+	}
+	.color1{
+		background-color: #C0C0C0;
+	}
+	.color2{
+		background-color: #A57C1D;
+	}
+	.color3{
+		background-color: #DBB150;
+	}
+	.color4{
+		background-color: #E0E0E0;
+	}
+	.color5{
+		background-color: #FFCCCC;
+	}
+	.color6{
+		background-color: #FFFF99;
+	}
+	.color7{
+		background-color: #99FFFF;
+	}
+	.color8{
+		background-color: #CC99FF;
+	}
+	.color9{
+		background-color: #E5CCFF
+	}

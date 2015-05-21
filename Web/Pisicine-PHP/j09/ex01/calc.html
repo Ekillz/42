@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>calc</title>
+</head>
+<script type="text/javascript">
+	setInterval(function() { 
+   alert("Please, use me...");
+}, 30000);
+</script>
+<body>
+	<input id="1" type="text">
+	<select id="selec" >
+ 		 <option id="2" value="+">+</option>
+		 <option id="3" value="-">-</option>
+ 		 <option id="4" value="*">*</option>
+ 		 <option id="5" value="/">/</option>
+ 		 <option id="6" value="%">%</option>
+	</select>
+	<input id="7" type="text">
+	<input onclick="calculate()" type="submit" value="Try me!">
+	<script type="text/javascript">
+		function calculate()
+		{
+			var on = 0;
+			var left = document.getElementById('1').value;
+			var operator = document.getElementById('selec').value;
+			var right = document.getElementById('7').value;
+			left = parseInt(left);
+			right = parseInt(right);
+			if (left >= 0 && right >= 0)
+			{
+				if (operator == '+')
+					var res = left + right;
+				else if (operator == '-')
+					var res = left - right;
+				else if (operator == '*')
+					var res = left * right;
+				else if (operator == '/')
+				{
+					if (left == 0 || right == 0)
+					{
+						on = 1;
+						console.log("It's over 9000!");
+						alert("It's over 9000!");
+					}
+					else
+						var res = left / right;
+				}
+				else if (operator == '%')
+				{
+					if (left == 0 || right == 0)
+					{
+						on = 1;
+						console.log("It's over 9000!");
+						alert("It's over 9000!");
+
+					}
+					else
+						var res = left % right;
+				}
+				if (on != 1)
+				{
+					alert(res)
+					console.log(res);
+				}
+			}
+			else
+				alert("Error :(");
+		}
+	</script>
+</body>
+</html>

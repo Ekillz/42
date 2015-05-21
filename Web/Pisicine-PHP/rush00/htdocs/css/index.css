@@ -1,0 +1,164 @@
+/* ================= HEADER ==============*/
+
+#header{
+	position: relative;
+	height: 150px;
+	width: 100%;
+	background-color: #FF6138;
+	color: white;
+}
+
+#logo{
+	float: left;
+
+}
+
+h1{
+	font-family: 'Dancing Script', cursive;
+	font-size: 48px;
+	margin: 0;
+    padding: 46px;
+    vertical-align:middle; /*middle centred*/
+    display: table-cell;
+}
+
+/* LOGIN FORM */
+
+#reg{
+	float: right;
+}
+
+/* ================= MAIN ============== */
+
+#main{
+	overflow: hidden;
+	min-height:100%;
+	position:relative;
+	background-color: white;
+}
+
+/* MENU */
+
+#menu{
+	margin-left: 25%;
+	background-color: #005555;
+	display: inline-block;
+}
+
+#menu ul{
+	margin: 0; padding: 0;
+	float: left;
+}
+
+#menu ul li {
+	display: inline;
+}
+
+#menu ul li a {
+	float: left; text-decoration: none;
+	color: white;
+	padding: 10.5px 11px;
+	background-color:  #BEEB9F;
+}
+
+#menu ul li a:visited {
+	color: white;
+}
+
+#menu ul li a:hover, #menu ul li .current {
+	color: white;
+	background-color: #5FD367;
+}
+
+/*CATALOG*/
+
+#shop{
+	overflow: hidden;
+}
+
+#catalog{
+	width: 1000px;
+	height: 800px;
+	margin: 20px 200px 200px 200px;
+}
+
+.col5{
+	position: relative;
+	float: left;
+	width: 18%;
+	height: 200px;
+	margin: 2%;
+	background-color: grey;
+}
+
+.food{
+	max-width: 100%;
+	height: 100%;
+}
+
+.buy{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	max-width: 30%;
+  	max-height: 30%;
+  	outline: none;
+}
+
+/* CART */
+
+#cart{
+	float: right;
+	width: 400px;
+	height: 800px;
+	border-radius: 50px 15px 30px;
+	background-color: #FFFF9D;
+}
+
+.button{
+	height: 100%;
+}
+
+#form{
+	float: right;
+	padding: 35px;
+}
+
+#form, button, input, ul{
+	margin-right: 10px;	
+}
+
+#form input{
+	margin-bottom: 10px;
+}
+
+#form ul{
+	display: inline-block;
+	list-style: none;
+}
+#form li{
+	margin-top: 6px;
+}
+
+#buttons{
+	display: inline-block;
+}
+
+#buttons, buttoms{
+	display: list-item;
+}
+
+#footer{
+	background-color: #FF6138;
+	color: white;
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+#auteur{
+	float: right;
+	padding: 25px;
+}

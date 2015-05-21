@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<script>
+			var size = 200; 
+			var color_count = -1;
+		</script>
+		<title>kaboom</title>
+		<style>
+
+			#main {
+				border-radius: 50%;
+				width: 200px;
+				height: 200px;
+				background-color: #000000;
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<div onclick="all_func(1)" onmouseout="all_func(0)" id="main" ></div>
+		<script type="text/javascript">
+			function all_func(which) 
+			{
+				if (which == 0)
+				{
+					if (size > 200)
+					{
+						color_count--;
+						if (color_count == -1)
+							color_count = 2;
+						size = size - 5;
+						if (color_count == 0)
+							var color = "background-color: red; ";
+						else if (color_count == 1)
+							var color = "background-color: green; ";
+						else if (color_count == 2)
+							var color = "background-color: blue; ";
+				   		var width = "width:"
+						var nouv = width.concat(size);
+						var height = "height:"
+						var nouv2 = height.concat(size);
+						var fin = nouv.concat("; ");
+						var fin2 = fin.concat(nouv2);
+						var fin3 = color.concat(fin2);
+						document.getElementById('main').setAttribute("style", fin3);
+					}
+				}
+				else if (which == 1)
+				{
+					color_count++;
+					if (color_count == 3)
+						color_count = 0;
+					size = size + 10;
+					if (size > 420)
+						size = 200;
+					if (color_count == 0)
+						var color = "background-color: red; ";
+					else if (color_count == 1)
+						var color = "background-color: green; ";
+					else if (color_count == 2)
+						var color = "background-color: blue; ";
+					var width = "width:"
+					var nouv = width.concat(size);
+					var height = "height:"
+					var nouv2 = height.concat(size);
+					var fin = nouv.concat("; ");
+					var fin2 = fin.concat(nouv2);
+					var fin3 = color.concat(fin2);
+					document.getElementById('main').setAttribute("style", fin3);
+				}
+			}
+</script>
+</body>
+</html>
