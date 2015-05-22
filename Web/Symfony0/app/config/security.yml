@@ -1,0 +1,18 @@
+imports:
+    - { resource: "@SymfonyUserBundle/Resources/config/security.yml" }
+
+
+security:
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/profile/add, role: ROLE_ADMIN }
+        - { path: ^/profile/delete, role: ROLE_ADMIN }
+        - { path: ^/profile/addProduct, role: ROLE_ADMIN }
+        - { path: ^/profile/cancelNews, role: ROLE_USER }
