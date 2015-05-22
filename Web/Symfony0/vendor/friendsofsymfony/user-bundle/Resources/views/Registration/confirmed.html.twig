@@ -1,0 +1,39 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/bundles/vmotors/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/bundles/vmotors/css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body background="/bundles/vmotors/images/bg.jpg">
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Welcome {{ app.user }}</h1>
+            <h3>You will be redirected to our main page</h3>
+            <br>
+            <meta http-equiv="refresh" content="4;url=/app_dev.php" />
+            <a href="/app_dev.php" class="btn btn-dark btn-lg">Access now</a>
+        </div>
+    </header>
+</body>
+</html>

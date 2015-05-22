@@ -1,0 +1,15 @@
+symfony_home:
+    resource: "@SymfonyHomeBundle/Resources/config/routing.yml"
+    prefix:   
+
+symfony_user:
+    resource: "@SymfonyUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+test:
+    resource: "@TestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
