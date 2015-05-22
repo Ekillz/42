@@ -1,0 +1,22 @@
+symfony_filter_categories:
+    path: /filter/{brand}/{engine}
+    defaults: { _controller: SymfonyHomeBundle:Default:brand, brand: "other", engine: all}
+    requirements:
+        brand: "aprilia|kawasaki|other|yamaha"
+
+symfony_home:
+    path: /
+    defaults: { _controller: SymfonyHomeBundle:Default:brand, brand: "other", engine: all}
+    requirements:
+    
+symfony_home_newsletter:
+    path: /newsletter.php
+    defaults: { _controller: SymfonyHomeBundle:Default:newsletter }
+
+symfony_home_newsletter:
+    path: /myaccount.php
+    defaults: { _controller: SymfonyHomeBundle:Default:myaccount }
+
+symfony_home_create:
+    path: /log/logs/create
+    defaults: { _controller: SymfonyHomeBundle:Data:create }
