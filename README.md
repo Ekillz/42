@@ -1,6 +1,6 @@
 42
 ==
-
+Go to my website for my cv and live projects : [emil-42.com](http://emil-42.com) <br/ >
 Projects of Emil Mammadzada for Ecole 42.
 
 Graphic   -> written in C.<br/ >
