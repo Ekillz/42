@@ -6,7 +6,7 @@
 /*   By: emammadz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/17 15:33:45 by emammadz          #+#    #+#             */
-/*   Updated: 2015/06/18 12:17:30 by emammadz         ###   ########.fr       */
+/*   Updated: 2015/06/18 16:13:14 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,34 @@
 
 Fixed::Fixed(void) : _fx(0)
 {
-	std::cout << "Default constructor called" << std::endl;
 	return;
 }
 
 Fixed::Fixed(Fixed const & src)
 {
-	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 	return;
 }
 
 Fixed::Fixed(const int n)
 {
-	std::cout << "Int constructor called" << std::endl;
 	this->_fx = n * 256;
 	return;
 }
 
 Fixed::Fixed(const float n)
 {
-	std::cout << "Float constructor called" << std::endl;
 	this->_fx = roundf(n * 256.0);
 	return ;
 }
 
 Fixed::~Fixed(void)
 {
-	std::cout << "Destructor called" << std::endl;
 	return ;
 }
 
 Fixed & Fixed::operator=(Fixed const &rhs)
 {
-	std::cout << "Assignation operator called" << std::endl;
 	this->_fx = rhs.getRawBits();
 
 	return *this;
@@ -105,6 +99,82 @@ bool Fixed::operator>=(Fixed const &rhs)
 	if (this->_fx >= rhs.getRawBits())
 		return true;
 	return false;
+}
+
+bool Fixed::operator==(Fixed const &rhs)
+{
+	if (this->_fx == rhs.getRawBits())
+		return true;
+	return false;
+}
+
+bool Fixed::operator!=(Fixed const &rhs)
+{
+	if (this->_fx != rhs.getRawBits())
+		return true;
+	return false;
+}
+
+Fixed Fixed::operator+(Fixed const & rhs) const
+{
+	Fixed res;
+	res._fx = this->_fx + rhs.getRawBits();
+	return res;
+}
+
+Fixed Fixed::operator-(Fixed const & rhs) const
+{
+	Fixed res;
+	res._fx = this->_fx - rhs.getRawBits();
+	return res;
+}
+
+Fixed Fixed::operator*(Fixed const & rhs) const
+{
+	Fixed res;
+	res._fx = (this->_fx * rhs.getRawBits()) / 256;
+	return res;
+}
+
+Fixed Fixed::operator/(Fixed const & rhs) const
+{
+	Fixed res;
+	res._fx = this->_fx / rhs.getRawBits();
+	return res;
+}
+
+Fixed &Fixed::min(Fixed &fix1, Fixed &fix2)
+{
+	return fix1._fx > fix2._fx ? fix2 : fix1;
+}
+
+Fixed const &Fixed::min(Fixed const &fix1, const Fixed &fix2)
+{
+	return fix1._fx > fix2._fx ? fix2 : fix1;
+}
+
+Fixed &Fixed::max(Fixed &fix1, Fixed &fix2)
+{
+	return fix1._fx < fix2._fx ? fix2 : fix1;
+}
+
+Fixed const &Fixed::max(Fixed const &fix1, const Fixed &fix2)
+{
+	return fix1._fx < fix2._fx ? fix2 : fix1;
+}
+
+Fixed &Fixed::operator++()
+{
+	this->_fx += 1;
+	return *this;
+}
+
+Fixed Fixed::operator++(int rhs)
+{
+	(void)rhs;
+	Fixed copy(*this);
+	++(*this);
+	return copy;
 }
 
 const int Fixed::_bits = 8;
