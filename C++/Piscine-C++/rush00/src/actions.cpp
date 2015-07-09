@@ -6,7 +6,7 @@
 /*   By: chaueur <chaueur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 19:28:02 by chaueur           #+#    #+#             */
-/*   Updated: 2015/06/21 21:24:50 by chaueur          ###   ########.fr       */
+/*   Updated: 2015/07/09 14:17:00 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void		apply_action( int action, Player *p, Object *objs )
 	}
 }
 
-void		random_generate( Enemy *horde, Object *objs )
+void		random_generate(Player *p, Enemy *horde, Object *objs )
 {
 	int		seed;
 
@@ -83,15 +83,20 @@ void		random_generate( Enemy *horde, Object *objs )
 	{
 		case		1:
 			col::createEnemy( horde, random() % MAX_W, 0 );
+			col::checkHit(p, horde, objs);
 			seed = rand() % MAX_ENEMY;
 			if ( horde[seed].getChp() )
+			{
 				col::createObject( objs, horde[seed].getX(), horde[seed].getY() + 1, "eShot" );
+				col::checkHit(p, horde, objs);
+			}
 			break;
 		case		2:
 			if (count < MAX_OBJECT - 20)
 			{
 				count++;
 				col::createObject( objs, random() % MAX_W, 0, "obstacle" );
+				col::checkHit(p, horde, objs);
 			}
 			break;
 		case		3:
@@ -112,7 +117,7 @@ void		main_loop( Player *p, Enemy *horde, Object *objs )
 		gettimeofday(&st, NULL);
 		get_action( &action );
 		apply_action( action, p, objs );
-		random_generate( horde, objs );
+		random_generate(p,  horde, objs );
 		p->setScore ( p->getScore() + 1 );
 		// scroll_objects( horde, objs );
 		/* Redraw screen. -> give array of instance */

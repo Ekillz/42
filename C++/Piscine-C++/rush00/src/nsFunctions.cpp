@@ -6,7 +6,7 @@
 /*   By: chaueur <chaueur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 20:59:56 by emammadz          #+#    #+#             */
-/*   Updated: 2015/06/21 20:56:02 by chaueur          ###   ########.fr       */
+/*   Updated: 2015/07/09 14:31:11 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,6 @@ int col::checkCol(Player * a, Enemy b[MAX_ENEMY], Object c[MAX_OBJECT])
 	return (0);
 }
 
-/*void col::updateEshot( Object *eShot )
-{
-	mvprintw( eShot->getY(), eShot->getX(), ESHOT );
-	move( eShot->getY(), eShot->getX() );
-	eShot->setY( eShot->getY() + 1 );
-}*/
-
 void col::updatePos(Player *a, Enemy b[MAX_ENEMY], Object c[MAX_OBJECT])
 {
 
@@ -54,6 +47,7 @@ void col::updatePos(Player *a, Enemy b[MAX_ENEMY], Object c[MAX_OBJECT])
 			b[i] += 1;
 			b[i].genMov();
 			mvprintw( b[i].getY(), b[i].getX(), ENEMY );
+			col::checkHit(a, b, c);
 		}
 		i++;
 	}
@@ -66,21 +60,28 @@ void col::updatePos(Player *a, Enemy b[MAX_ENEMY], Object c[MAX_OBJECT])
 			{
 				c[i] += 1;
 				if ( c[i].getType() == "obstacle" )
+				{
 					mvprintw( c[i].getY(), c[i].getX(), OBSTACLE );
+					col::checkHit(a, b, c);
+				}
 				else
 				{
 					mvprintw( c[i].getY(), c[i].getX(), FSHOT );
+					col::checkHit(a, b, c);
 					if (col::checkCol(a, b, c) == 2)
 						a->setChp(0);
 					mvprintw( c[i].getY(), c[i].getX(), " " );
+					col::checkHit(a, b, c);
 					c[i] += 1;
 					mvprintw( c[i].getY(), c[i].getX(), FSHOT );
+					col::checkHit(a, b, c);
 				}
 			}
 			else if (c[i].getType() == "fShot")
 			{
 				c[i] -= 1;
 				mvprintw( c[i].getY(), c[i].getX(), FSHOT );
+				col::checkHit(a, b, c);
 			}
 		}
 		i++;
