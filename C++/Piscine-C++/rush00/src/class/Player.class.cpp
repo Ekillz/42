@@ -6,7 +6,7 @@
 /*   By: chaueur <chaueur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:55:38 by emammadz          #+#    #+#             */
-/*   Updated: 2015/06/21 20:17:25 by chaueur          ###   ########.fr       */
+/*   Updated: 2015/07/13 15:54:50 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Player::Player(void) : Vessel()
 {
 	this->_x = 1;
 	this->_y = MAX_H;
-	this->_chp = 1;
+	this->_chp = 5;
 	this->_mhp = 1;
 	this->_score = 0;
 	this->_dmg = 1;

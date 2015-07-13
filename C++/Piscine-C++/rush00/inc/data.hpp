@@ -6,7 +6,7 @@
 /*   By: chaueur <chaueur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 13:57:14 by chaueur           #+#    #+#             */
-/*   Updated: 2015/06/21 21:25:11 by chaueur          ###   ########.fr       */
+/*   Updated: 2015/07/13 15:46:23 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void			game_over( Player *p );
 # define ESHOT		"|"
 # define FSHOT		"|"
 # define MAX_ENEMY 	30
-# define MAX_OBJECT 40
+# define MAX_OBJECT 100
 # define FRAMERATE  60
 
 #endif

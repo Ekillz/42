@@ -6,7 +6,7 @@
 /*   By: chaueur <chaueur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 20:59:56 by emammadz          #+#    #+#             */
-/*   Updated: 2015/07/09 14:31:11 by emammadz         ###   ########.fr       */
+/*   Updated: 2015/07/13 16:00:20 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ void col::updatePos(Player *a, Enemy b[MAX_ENEMY], Object c[MAX_OBJECT])
 				{
 					mvprintw( c[i].getY(), c[i].getX(), FSHOT );
 					col::checkHit(a, b, c);
-					if (col::checkCol(a, b, c) == 2)
-						a->setChp(0);
 					mvprintw( c[i].getY(), c[i].getX(), " " );
 					col::checkHit(a, b, c);
 					c[i] += 1;

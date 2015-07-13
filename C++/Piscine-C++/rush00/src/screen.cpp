@@ -6,7 +6,7 @@
 /*   By: chaueur <chaueur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 16:42:36 by chaueur           #+#    #+#             */
-/*   Updated: 2015/07/09 14:21:00 by emammadz         ###   ########.fr       */
+/*   Updated: 2015/07/13 15:55:43 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ void		scr_upd( Player *p, Enemy *horde, Object *objs )
 
 	colision = col::checkCol( p, horde, objs );
 	if (colision == 1 || colision == 2)
-		p->setChp( 0 );
-	if (p->getChp() == 0)
+		p->setChp(p->getChp() - 1);
+	if (p->getChp() <= 0)
 	{
 		game_over( p );
 	}

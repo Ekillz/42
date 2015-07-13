@@ -6,7 +6,7 @@
 /*   By: chaueur <chaueur@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/20 19:28:02 by chaueur           #+#    #+#             */
-/*   Updated: 2015/07/09 14:17:00 by emammadz         ###   ########.fr       */
+/*   Updated: 2015/07/13 16:10:52 by emammadz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,18 @@ void		apply_action( int action, Player *p, Object *objs )
       		break;
     	case ACTION_SHOOT:
     		col::createObject( objs, p->getX() + 1, p->getY() - 1, "fShot" );
+    		col::createObject( objs, p->getX() + 4, p->getY() - 1, "fShot" );
+    		col::createObject( objs, p->getX() + 5, p->getY() - 1, "fShot" );
+    		col::createObject( objs, p->getX() + 6, p->getY() - 1, "fShot" );
+    		col::createObject( objs, p->getX() - 1, p->getY() - 2, "fShot" );
+    		col::createObject( objs, p->getX(), p->getY() - 2, "fShot" );
+    		col::createObject( objs, p->getX() + 1, p->getY() - 2, "fShot" );
+    		col::createObject( objs, p->getX() + 4, p->getY() - 2, "fShot" );
+    		col::createObject( objs, p->getX() + 5, p->getY() - 2, "fShot" );
+    		col::createObject( objs, p->getX() - 1, p->getY() - 3, "fShot" );
+    		col::createObject( objs, p->getX() + 3, p->getY() - 3, "fShot" );
+    		col::createObject( objs, p->getX() + 4, p->getY() - 3, "fShot" );
+    		col::createObject( objs, p->getX() + 5, p->getY() - 3, "fShot" );
       		break;
 	    default:
 	      	break;
